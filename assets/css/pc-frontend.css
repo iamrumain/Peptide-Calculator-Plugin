@@ -1,0 +1,218 @@
+/* Peptide Calculator — frontend styles
+   All visual values are driven by CSS custom properties set inline
+   per-instance (see PC_Render) so the admin dashboard / Elementor
+   controls can restyle every instance independently. */
+
+.pc-calculator {
+	--pc-font-heading: Georgia, 'Times New Roman', Times, serif;
+	--pc-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--pc-font-size-base: 15px;
+	--pc-font-size-title: 22px;
+	--pc-font-size-result: 28px;
+	--pc-radius-card: 16px;
+	--pc-radius-input: 10px;
+	--pc-padding: 32px;
+	--pc-gap: 24px;
+
+	--pc-input-bg: #ffffff;
+	--pc-input-border: #e5e7eb;
+	--pc-input-text: #1f2937;
+	--pc-input-title-color: #1f2937;
+	--pc-label-color: #374151;
+	--pc-accent-color: #2563eb;
+	--pc-icon-color: #2563eb;
+	--pc-card-border-color: #e5e7eb;
+
+	--pc-results-grad-start: #1e1b6e;
+	--pc-results-grad-end: #5b21b6;
+	--pc-results-title-color: #ffffff;
+	--pc-results-subtitle-color: #c7c2f0;
+	--pc-results-label-color: #cbc6ef;
+	--pc-results-value-color: #ffffff;
+	--pc-results-unit-color: #cbc6ef;
+	--pc-divider-color: rgba(255,255,255,0.18);
+	--pc-disclaimer-bg: rgba(255,255,255,0.12);
+	--pc-disclaimer-text: #e7e4fb;
+
+	box-sizing: border-box;
+	font-family: var(--pc-font-body);
+	font-size: var(--pc-font-size-base);
+	display: grid;
+	gap: var(--pc-gap);
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.pc-calculator *,
+.pc-calculator *::before,
+.pc-calculator *::after {
+	box-sizing: border-box;
+}
+
+.pc-calculator.pc-layout-row {
+	grid-template-columns: 1fr 1fr;
+}
+
+.pc-calculator.pc-layout-stack {
+	grid-template-columns: 1fr;
+}
+
+@media (max-width: 720px) {
+	.pc-calculator.pc-layout-row {
+		grid-template-columns: 1fr;
+	}
+}
+
+.pc-panel {
+	border-radius: var(--pc-radius-card);
+	padding: var(--pc-padding);
+}
+
+.pc-calculator.pc-shadow .pc-panel {
+	box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.pc-panel-inputs {
+	background: var(--pc-input-bg);
+	border: 1px solid var(--pc-card-border-color);
+}
+
+.pc-calc-title {
+	font-family: var(--pc-font-heading);
+	color: var(--pc-input-title-color);
+	font-size: var(--pc-font-size-title);
+	font-weight: 700;
+	margin: 0 0 24px;
+	line-height: 1.25;
+}
+
+.pc-field + .pc-field {
+	margin-top: 20px;
+}
+
+.pc-field-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	gap: 8px;
+}
+
+.pc-field-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	color: var(--pc-label-color);
+	font-size: 0.93em;
+	font-weight: 500;
+}
+
+.pc-icon {
+	display: inline-flex;
+	color: var(--pc-icon-color);
+	flex-shrink: 0;
+}
+
+.pc-icon svg {
+	display: block;
+}
+
+.pc-calculator.pc-icons-hidden .pc-icon {
+	display: none;
+}
+
+.pc-field-value {
+	color: var(--pc-accent-color);
+	font-weight: 700;
+	font-size: 0.95em;
+	font-variant-numeric: tabular-nums;
+}
+
+.pc-input {
+	width: 100%;
+	display: block;
+	font-family: var(--pc-font-body);
+	font-size: 1em;
+	color: var(--pc-input-text);
+	background: var(--pc-input-bg);
+	border: 1px solid var(--pc-input-border);
+	border-radius: var(--pc-radius-input);
+	padding: 10px 14px;
+	outline: none;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pc-input:focus {
+	border-color: var(--pc-accent-color);
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.pc-input::-webkit-outer-spin-button,
+.pc-input::-webkit-inner-spin-button {
+	opacity: 0.5;
+}
+
+.pc-panel-results {
+	background: linear-gradient(135deg, var(--pc-results-grad-start), var(--pc-results-grad-end));
+	border: none;
+	display: flex;
+	flex-direction: column;
+}
+
+.pc-results-title {
+	font-family: var(--pc-font-heading);
+	color: var(--pc-results-title-color);
+	font-size: var(--pc-font-size-title);
+	font-weight: 700;
+	margin: 0 0 4px;
+	line-height: 1.25;
+}
+
+.pc-results-subtitle {
+	color: var(--pc-results-subtitle-color);
+	margin: 0 0 22px;
+	font-size: 0.93em;
+}
+
+.pc-result-row {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 14px 0;
+}
+
+.pc-result-label {
+	color: var(--pc-results-label-color);
+	font-size: 0.93em;
+}
+
+.pc-result-value {
+	color: var(--pc-results-value-color);
+	font-size: var(--pc-font-size-result);
+	font-weight: 700;
+	white-space: nowrap;
+	font-variant-numeric: tabular-nums;
+}
+
+.pc-result-unit {
+	font-size: 0.5em;
+	font-weight: 500;
+	color: var(--pc-results-unit-color);
+	margin-left: 2px;
+}
+
+.pc-divider {
+	height: 1px;
+	background: var(--pc-divider-color);
+}
+
+.pc-disclaimer {
+	margin-top: 22px;
+	background: var(--pc-disclaimer-bg);
+	color: var(--pc-disclaimer-text);
+	border-radius: calc(var(--pc-radius-input) * 0.9);
+	padding: 14px 16px;
+	font-size: 0.85em;
+	line-height: 1.5;
+}

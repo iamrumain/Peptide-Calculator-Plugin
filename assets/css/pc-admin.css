@@ -1,0 +1,130 @@
+.pc-admin-wrap {
+	max-width: 1400px;
+}
+
+.pc-admin-header h1 {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.pc-admin-header h1 .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+	color: #5b21b6;
+}
+
+.pc-admin-tagline {
+	color: #646970;
+	margin-top: -4px;
+}
+
+.pc-usage-box {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-left: 4px solid #5b21b6;
+	border-radius: 4px;
+	padding: 14px 18px;
+	margin: 16px 0 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 32px;
+}
+
+.pc-usage-box code {
+	background: #f3f1fb;
+	padding: 2px 8px;
+	border-radius: 4px;
+}
+
+.pc-pill {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 999px;
+	font-size: 12px;
+}
+
+.pc-pill-ok {
+	background: #e7f7ed;
+	color: #1a7f3c;
+}
+
+.pc-pill-warn {
+	background: #fdf2e3;
+	color: #9a6300;
+}
+
+.pc-admin-columns {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 460px;
+	gap: 28px;
+	align-items: start;
+}
+
+@media (max-width: 1100px) {
+	.pc-admin-columns {
+		grid-template-columns: 1fr;
+	}
+}
+
+.pc-admin-main {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 0 20px 20px;
+}
+
+.pc-tabs {
+	margin: 0 -20px 0;
+	padding: 0 20px;
+}
+
+.pc-tab-panel {
+	padding-top: 16px;
+}
+
+.pc-tab-panel h3 {
+	margin-top: 24px;
+}
+
+.pc-reset-form {
+	margin-top: 16px;
+	padding-top: 16px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.pc-admin-preview {
+	position: relative;
+}
+
+.pc-preview-sticky {
+	position: sticky;
+	top: 40px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 20px;
+}
+
+.pc-preview-sticky h2 {
+	margin-top: 0;
+	margin-bottom: 2px;
+}
+
+#pc-live-preview {
+	margin-top: 16px;
+}
+
+#pc-live-preview .pc-calculator {
+	grid-template-columns: 1fr !important;
+	max-width: 100%;
+}
+
+.wp-picker-container {
+	vertical-align: middle;
+}
+
+.pc-live-number {
+	width: 90px !important;
+}
