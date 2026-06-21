@@ -104,3 +104,6 @@ The uninstall handler in `uninstall.php` deletes the `pc_settings` option and cl
 - The calculator assumes peptide vial amount in mg and converts to mcg if the dose unit is `mcg`.
 - The frontend supports multiple calculators on the same page by generating unique IDs.
 - The admin preview renders the same template and style as the frontend.
+
+
+<img width="1443" height="838" alt="image" src="https://github.com/user-attachments/assets/7f21379c-c272-4772-b8b9-1cc8576613e0" />
