@@ -105,5 +105,16 @@ The uninstall handler in `uninstall.php` deletes the `pc_settings` option and cl
 - The frontend supports multiple calculators on the same page by generating unique IDs.
 - The admin preview renders the same template and style as the frontend.
 
+## Admin dashboard view
 
 <img width="1443" height="838" alt="image" src="https://github.com/user-attachments/assets/7f21379c-c272-4772-b8b9-1cc8576613e0" />
+
+<img width="1518" height="841" alt="image" src="https://github.com/user-attachments/assets/a402496a-1b56-464b-9e21-2e8f4dd37448" />
+
+<img width="1335" height="858" alt="image" src="https://github.com/user-attachments/assets/36dc5582-aa93-4108-b706-1f58f9229742" />
+
+<img width="1306" height="851" alt="image" src="https://github.com/user-attachments/assets/bdecc89c-3e8a-4b1c-b403-9ac7b5fb58ad" />
+
+
+## User interface
+<img width="1056" height="399" alt="image" src="https://github.com/user-attachments/assets/b22be3c5-1f2c-4551-b3d6-06f960820d50" />
