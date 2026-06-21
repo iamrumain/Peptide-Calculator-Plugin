@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Peptide Calculator
- * Plugin URI:         https://github.com/iamrumain
+ * Plugin URI:         https://github.com/iamrumain/Peptide-Calculator-Plugin
  * Description:        A reconstitution calculator (vial size, water volume, desired dose → concentration, injection volume, syringe units) with an Elementor widget, a [peptide_calculator] shortcode, and a full admin dashboard for colors, fonts, sizes, text, and layout.
  * Version:             1.0.0
  * Requires at least:   6.0
